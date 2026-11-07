@@ -112,35 +112,30 @@ footer{padding:28px 0;text-align:center;color:var(--soft);font-size:14px;border-
  .tags{letter-spacing:.18em;font-size:13px}.tags li+li:before{display:none}
  nav ul{justify-content:flex-start}
 }
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
- .content-grid {
+/* Content creation social-media grid only */
+.social .feed {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  max-width: 450px;
+  margin: 28px auto 0;
 }
 
-.content-card {
+.social .feed .post {
+  display: block;
   aspect-ratio: 1 / 1;
   overflow: hidden;
-  padding: 0;
 }
 
-.content-card img {
+.social .feed .post img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.content-card h3,
-.content-card p {
+.social .feed .post span {
   display: none;
-}
-
-@media (max-width: 700px) {
-  .content-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 </style>
 </head>
@@ -197,22 +192,22 @@ footer{padding:28px 0;text-align:center;color:var(--soft);font-size:14px;border-
    <ul><li>Concentration in Integrated Marketing.</li><li>Relevant coursework: Applied Social Media in Graphic Communication, Consumer Packaging, Digital Photography & Motion Graphics, Web Development & Content Management, Tangible Interactive Product Development, Digital Typography, Managing Quality and Contemporary Print Management & Manufacturing.</li></ul>
   </div>
  </div>
- <a class="btn" href="images/Elle-Witkowski-Resume.pdf">Download full resume (PDF)</a>
+ <a class="btn" href="images/Elle_Witkowski_resume.pdf">Download full resume (PDF)</a>
 </div></section>
 
 <section id="work"><div class="wrap">
- <h2>Selected work</h2>
+ <h2>Selected Work</h2>
  <div id="projects"></div>
 </div></section>
 
 <section id="cases" style="padding-top:0"><div class="wrap">
- <h2>Class projects</h2>
+ <h2>Class Projects</h2>
  <p class="lede">A selection of academic projects that combine marketing strategy, visual communication, social media, packaging and consumer research.</p>
  <div id="cases-list"></div>
 </div></section>
 
 <section class="social" id="social"><div class="wrap">
- <h2>Content creation</h2>
+ <h2>Content Creation</h2>
  <p class="lede">A collection of lifestyle content, branded social concepts, campaign visuals, and photography. I enjoy turning everyday products, places, and experiences into content that feels elevated, on-brand, and scroll-stopping.</p>
  <div class="feed">
   <a class="post" href="images/post-aura-tide.jpg" target="_blank" rel="noopener"><img src="images/post-aura-tide.jpg" alt="Aura Tide summer collection post: Saltwater State of Mind" loading="lazy"><span>Aura Tide</span><small>Saltwater State of Mind</small></a>
@@ -224,7 +219,7 @@ footer{padding:28px 0;text-align:center;color:var(--soft);font-size:14px;border-
 
 <section class="contact" id="contact"><div class="wrap">
  <h2>Let’s connect!</h2>
- <p class="lede">I’m always excited to connect with people in marketing, PR, lifestyle, entertainment, events,\ and creative industries.</p>
+ <p class="lede">I’m always excited to connect with people in marketing, PR, lifestyle, entertainment, events and creative industries.</p>
  <div class="links">
   <a href="mailto:elliewit3@gmail.com"><small>Email</small>elliewit3@gmail.com</a>
   <a href="https://www.linkedin.com/in/ellie-witkowski" target="_blank" rel="noopener"><small>LinkedIn</small>linkedin.com/in/ellie-witkowski</a>
