@@ -80,8 +80,13 @@ nav ul a.on{border-bottom-color:var(--accent)}
 .label{display:inline-block;border:1px solid var(--accent);color:var(--accent);padding:2px 14px;font:italic 500 17px var(--serif);margin-bottom:12px}
 .case h3{font-size:40px;margin-bottom:8px}
 .case .desc{max-width:70ch;margin-bottom:10px}
-.mine{color:var(--soft);margin-bottom:22px}
-.cshots{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:22px}
+.mine{color:var(--soft);margin-bottom:22px}.cshots{
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0, 1fr));
+  gap:12px;
+  margin-bottom:22px;
+  width:100%;
+}
 .cshots .ph{aspect-ratio:4/5}
 .focus{font:italic 500 19px var(--serif);color:var(--accent)}
 /* content creation */
@@ -112,26 +117,33 @@ footer{padding:28px 0;text-align:center;color:var(--soft);font-size:14px;border-
  .tags{letter-spacing:.18em;font-size:13px}.tags li+li:before{display:none}
  nav ul{justify-content:flex-start}
 }
-/* Content creation social-media grid only */
-.social .feed {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3px;
-  max-width: 800px;
-  margin: 28px auto 0;
+/* content creation */
+.social .feed{
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0, 1fr));
+  gap:12px;
+  margin-bottom:22px;
+  width:100%;
+  max-width:none;
 }
 
-.social .feed .post {
-  display: block;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
+.social .feed .post{
+  display:block;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  padding:0;
 }
 
-.social .feed .post img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.social .feed .post img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.social .feed .post span,
+.social .feed .post small{
+  display:none;
 }
 
 .social .feed .post span {
@@ -157,7 +169,7 @@ footer{padding:28px 0;text-align:center;color:var(--soft);font-size:14px;border-
  <h1>Elle Witkowski</h1>
  <div class="divider"><i></i></div>
  <ul class="tags"><li>Marketing</li><li>Client Partnerships</li><li>Account Management</li><li>Event Strategy</li><li>Content & Social Media</li><li>Project Management</li></ul>
- <div class="reach"><a href="mailto:elliewit3@gmail.com">elliewit3@gmail.com</a><span>·</span><a href="https://www.linkedin.com/in/ellie-witkowski" target="_blank" rel="noopener">linkedin.com/in/ellie-witkowski</a><span>·</span><span>San Luis Obispo, CA</span></div>
+ <div class="reach"><a href="mailto:elliewit3@gmail.com">elliewit3@gmail.com</a><span>·</span><a href="https://www.linkedin.com/in/ellie-witkowski" target="_blank" rel="noopener">linkedin.com/in/ellie-witkowski</a><span>·</span><span>·</span><a href="tel:YOURPHONENUMBER">YOUR PHONE NUMBER</a><span>Los Angeles, CA</span></div>
 </div>
 
 <header><div class="wrap"><nav aria-label="Main"><ul>
