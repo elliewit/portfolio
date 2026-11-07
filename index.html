@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elle Witkowski | Marketing Portfolio</title>
+<meta name="description" content="Elle Witkowski: Cal Poly integrated marketing student and Account Manager at University Graphic Systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<style>
+/* To try a different script, change --s (e.g. 'Monsieur La Doulaise', 'Allura', 'Ballet') and the font name in the <link> above. */
+:root{--bg:#F5F8FC;--ink:#14284B;--soft:#58667C;--sky:#9CC3E6;--blush:#E6EFF9;--accent:#3F6C9B;--line:#D9E3EF;--card:#fff;
+--s:'Mrs Saint Delafield','Snell Roundhand','Brush Script MT',cursive;--serif:'Cormorant Garamond',Georgia,serif;--b:'Jost','Helvetica Neue',Arial,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{font:300 17px/1.7 var(--b);color:var(--ink);background:var(--bg)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+h1,h2{font-family:var(--s);font-weight:400;line-height:1.1}
+h3{font-family:var(--serif);font-weight:600;line-height:1.1}
+h2{font-size:clamp(54px,7vw,84px);margin-bottom:8px}
+.lede{color:var(--soft);max-width:60ch;margin-bottom:44px}
+/* top */
+.intro{text-align:center;padding:56px 24px 44px}
+.intro h1{font-size:clamp(84px,17vw,210px);line-height:1;margin-bottom:8px;padding:0 .1em}
+.divider{display:flex;align-items:center;justify-content:center;gap:10px;margin:18px auto 30px;max-width:150px}
+.divider:before,.divider:after{content:"";flex:1;height:1px;background:#B7C8DC}
+.divider i{width:7px;height:7px;border:1px solid #7F97B3;transform:rotate(45deg)}
+.tags{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px;list-style:none;padding:0;margin:0 auto 28px;max-width:900px;text-transform:uppercase;letter-spacing:.3em;font-size:15px;color:var(--soft)}
+.tags li+li:before{content:"|";margin-right:22px;color:#B7C8DC;letter-spacing:0}
+.reach{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 18px;font:italic 500 20px var(--serif);color:var(--soft)}
+.reach a{text-decoration:none}.reach a:hover{color:var(--accent)}
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(245,248,252,.93);backdrop-filter:blur(10px);border-block:1px solid var(--line)}
+nav ul{display:flex;justify-content:center;gap:4px;list-style:none;padding:0;overflow-x:auto;height:56px;align-items:center}
+nav ul a{display:block;padding:6px 14px;text-decoration:none;font-size:15px;white-space:nowrap;border-bottom:1px solid transparent}
+nav ul a:hover{color:var(--accent)}
+nav ul a.on{border-bottom-color:var(--accent)}
+/* shared */
+.ph{position:relative;display:grid;place-items:center;text-align:center;background:linear-gradient(160deg,#E3EEF9,#CFE0F2);color:var(--soft);font-size:14px;overflow:hidden;padding:12px}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:6px}
+.chips span{border:1px solid var(--sky);padding:2px 12px;font-size:14px;color:var(--ink)}
+/* bio */
+.about .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}
+.about .ph{aspect-ratio:4/5;outline:1px solid var(--accent);outline-offset:12px}
+.about .ph img{object-position:48% 22%}
+.about p{margin-bottom:16px;max-width:58ch}
+/* skills */
+.skills{background:var(--blush)}
+.sk{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;max-width:900px}
+.sk li{background:#fff;border:1px solid var(--line);border-top:2px solid var(--accent);padding:8px 18px;font-size:16px}
+/* resume */
+.resume{background:#fff;border-block:1px solid var(--line)}
+.job{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:32px 0;border-top:1px solid var(--accent)}
+.job .when{color:var(--soft);font-size:15px}
+.job h3{font-size:30px;margin-bottom:2px}
+.job .org{color:var(--accent);font:italic 500 19px var(--serif);margin-bottom:12px}
+.job ul{padding-left:20px;max-width:64ch}.job li{margin-bottom:7px}
+.btn{display:inline-block;margin-top:8px;padding:14px 32px;text-decoration:none;border:1px solid var(--ink);transition:background .25s,color .25s}
+.btn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+/* ugs work */
+.proj{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;padding:36px;margin-bottom:32px;background:var(--card);border:1px solid var(--line);border-top:3px solid var(--sky)}
+.proj:nth-child(even){grid-template-columns:.95fr 1.05fr}
+.proj:nth-child(even) .shots{order:2}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:start}
+.shots .ph:first-child{grid-column:1/-1;aspect-ratio:16/10}
+.shots .ph{aspect-ratio:1}
+.tag{display:block;font:italic 500 18px var(--serif);color:var(--accent);margin-bottom:4px}
+.proj h3{font-size:38px;margin-bottom:2px}
+.client{color:var(--soft);margin-bottom:20px}
+.proj dl{display:grid;gap:14px}
+.proj dt{font:600 20px var(--serif)}
+.proj dd{color:var(--soft);font-size:16px}
+/* class projects */
+.case{border:1px solid var(--line);border-top:3px solid var(--accent);background:#fff;padding:36px;margin-bottom:32px}
+.label{display:inline-block;border:1px solid var(--accent);color:var(--accent);padding:2px 14px;font:italic 500 17px var(--serif);margin-bottom:12px}
+.case h3{font-size:40px;margin-bottom:8px}
+.case .desc{max-width:70ch;margin-bottom:10px}
+.mine{color:var(--soft);margin-bottom:22px}
+.cshots{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:22px}
+.cshots .ph{aspect-ratio:4/3}
+.focus{font:italic 500 19px var(--serif);color:var(--accent)}
+/* content creation */
+.social{background:#fff;border-block:1px solid var(--line)}
+.feed{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:start;max-width:880px}
+.post{display:block;text-decoration:none;border:1px solid var(--line);background:var(--bg);padding:8px;transition:border-color .25s}
+.post:hover{border-color:var(--accent)}
+.post img{display:block;width:100%;height:auto}
+.post span{display:block;padding:10px 4px 4px;font:italic 500 17px var(--serif);line-height:1.2}
+.post small{display:block;padding:0 4px 4px;font-size:13px;color:var(--soft)}
+/* contact */
+.contact{text-align:center}
+.contact h2{font-size:clamp(64px,10vw,110px)}
+.contact .lede{margin-inline:auto}
+.links{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.links a,.links div{min-width:250px;padding:20px 24px;border:1px solid var(--ink);text-decoration:none;background:#fff;transition:background .25s,color .25s}
+.links div{border-color:var(--line)}
+.links a:hover{background:var(--ink);color:#fff}
+.links small{display:block;font:italic 500 17px var(--serif);color:var(--accent)}
+footer{padding:28px 0;text-align:center;color:var(--soft);font-size:14px;border-top:1px solid var(--line)}
+@media(max-width:860px){
+ .about .wrap,.proj,.proj:nth-child(even){grid-template-columns:1fr}
+ .proj:nth-child(even) .shots{order:0}
+ .about .ph{max-width:360px}
+ .job{grid-template-columns:1fr;gap:6px}
+ .feed{grid-template-columns:repeat(2,1fr)}
+ .proj,.case{padding:20px}section{padding:64px 0}
+ .tags{letter-spacing:.18em;font-size:13px}.tags li+li:before{display:none}
+ nav ul{justify-content:flex-start}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="intro" id="home">
+ <h1>Elle Witkowski</h1>
+ <div class="divider"><i></i></div>
+ <ul class="tags"><li>Marketing</li><li>Events</li><li>Social Media</li><li>Brand Partnerships</li><li>Content Creation</li></ul>
+ <div class="reach"><a href="mailto:elliewit3@gmail.com">elliewit3@gmail.com</a><span>·</span><a href="https://www.linkedin.com/in/ellie-witkowski" target="_blank" rel="noopener">linkedin.com/in/ellie-witkowski</a><span>·</span><span>San Luis Obispo, CA</span></div>
+</div>
+
+<header><div class="wrap"><nav aria-label="Main"><ul>
+ <li><a href="#about">Biography</a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li>
+ <li><a href="#work">Work</a></li><li><a href="#cases">Class projects</a></li><li><a href="#social">Content</a></li><li><a href="#contact">Contact</a></li>
+</ul></nav></div></header>
+
+<main>
+<section class="about" id="about"><div class="wrap">
+ <div class="ph" data-alt="Elle Witkowski in her University Graphic Systems polo" data-img="images/elle-headshot.jpg">Professional photo<br>images/elle-headshot.jpg</div>
+ <div>
+  <h2>Biography</h2>
+  <p>Hi, I’m Elle! I’m a Cal Poly Graphic Communication student focused on integrated marketing. I love bringing creative ideas to life through branding, content, events, and client-facing projects.</p>
+  <p>As an Account Manager at University Graphic Systems, I help guide projects from the first conversation through final delivery. I work with clients on everything from print and promotional products to event materials, apparel, signage, and marketing pieces.</p>
+  <p>I’m especially interested in lifestyle, beauty, entertainment, and brand-experience marketing.</p>
+ </div>
+</div></section>
+
+<section class="skills" id="skills"><div class="wrap">
+ <h2>Skills</h2>
+ <ul class="sk">
+  <li>Marketing &amp; Campaign Development</li><li>Social Media Strategy</li><li>Influencer Marketing</li><li>Content Creation</li><li>Brand Storytelling</li><li>Client Communication</li><li>Account &amp; Project Management</li><li>Event Promotion</li><li>Print &amp; Promotional Products</li><li>Adobe Photoshop, Illustrator &amp; InDesign</li><li>Canva, Buffer &amp; Meta Tools</li>
+ </ul>
+</div></section>
+
+<section class="resume" id="experience"><div class="wrap">
+ <h2>Experience</h2>
+ <p class="lede">Hands-on client work, from the first email to the final delivery.</p>
+ <div class="job">
+  <div class="when">[Start date] to present<br>San Luis Obispo, CA</div>
+  <div>
+   <h3>Account Manager</h3><div class="org">University Graphic Systems, Cal Poly</div>
+   <ul>
+    <li>Work directly with clients on event materials, promotional products, signage, stickers, apparel, and print collateral.</li>
+    <li>Guide each project from initial conversation and estimate through artwork, proofing, production, and delivery.</li>
+    <li>Coordinate with production teams and vendors to keep projects organized and on schedule.</li>
+    <li>Help coordinate events and support marketing and creative projects. [Add a number: projects per quarter, clients managed, etc.]</li>
+   </ul>
+  </div>
+ </div>
+ <div class="job">
+  <div class="when">Expected May 2027</div>
+  <div>
+   <h3>B.S. Graphic Communication</h3><div class="org">California Polytechnic State University, San Luis Obispo</div>
+   <ul><li>Concentration in Integrated Marketing.</li><li>Relevant coursework: [add marketing, branding, and production classes].</li></ul>
+  </div>
+ </div>
+ <a class="btn" href="images/Elle-Witkowski-Resume.pdf">Download full resume (PDF)</a>
+</div></section>
+
+<section id="work"><div class="wrap">
+ <h2>Selected work</h2>
+ <p class="lede">A few University Graphic Systems projects, each managed from the first conversation to final delivery.</p>
+ <div id="projects"></div>
+</div></section>
+
+<section id="cases" style="padding-top:0"><div class="wrap">
+ <h2>Class projects</h2>
+ <p class="lede">A selection of academic projects that combine marketing strategy, visual communication, social media, packaging, and consumer research.</p>
+ <div id="cases-list"></div>
+</div></section>
+
+<section class="social" id="social"><div class="wrap">
+ <h2>Content creation</h2>
+ <p class="lede">A collection of lifestyle content, branded social concepts, campaign visuals, and photography. I enjoy turning everyday products, places, and experiences into content that feels elevated, on-brand, and scroll-stopping.</p>
+ <div class="feed">
+  <a class="post" href="images/post-aura-tide.jpg" target="_blank" rel="noopener"><img src="images/post-aura-tide.jpg" alt="Aura Tide summer collection post: Saltwater State of Mind" loading="lazy"><span>Aura Tide</span><small>Saltwater State of Mind</small></a>
+  <a class="post" href="images/post-aperitivo-hour.jpg" target="_blank" rel="noopener"><img src="images/post-aperitivo-hour.jpg" alt="Ciao Social Club post: Aperitivo Hour" loading="lazy"><span>Ciao Social Club</span><small>Aperitivo Hour</small></a>
+  <a class="post" href="images/post-picnic-society.jpg" target="_blank" rel="noopener"><img src="images/post-picnic-society.jpg" alt="Picnic Society post: Sundays Are for Sharing" loading="lazy"><span>Picnic Society</span><small>Sundays Are for Sharing</small></a>
+  <a class="post" href="images/post-rovers-club.jpg" target="_blank" rel="noopener"><img src="images/post-rovers-club.jpg" alt="The Rover’s Club post: Take the Long Way Home" loading="lazy"><span>The Rover’s Club</span><small>Take the Long Way Home</small></a>
+ </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+ <h2>Let’s connect!</h2>
+ <p class="lede">I’m always excited to connect with people in marketing, PR, lifestyle, entertainment, events, and creative industries.</p>
+ <div class="links">
+  <a href="mailto:elliewit3@gmail.com"><small>Email</small>elliewit3@gmail.com</a>
+  <a href="https://www.linkedin.com/in/ellie-witkowski" target="_blank" rel="noopener"><small>LinkedIn</small>linkedin.com/in/ellie-witkowski</a>
+  <div><small>Location</small>San Luis Obispo, CA / Los Angeles area</div>
+ </div>
+</div></section>
+</main>
+
+<footer>© 2026 Elle Witkowski · Cal Poly San Luis Obispo</footer>
+
+<script>
+/* ---- EDIT PROJECTS HERE. Photos go in /images; use the file names shown in each placeholder. ---- */
+const projects=[
+ {tag:"Event merchandise",title:"[Event name] merch",client:"[Client / organization]",img:"event",
+  goal:"Give [client] event merchandise that guests would keep and that carried the event’s look beyond the day itself.",
+  did:"Ran the project from the first call. Built the estimate, aligned the artwork with the client’s brand, handled proofs and approvals, and coordinated production and delivery ahead of the event date.",
+  result:"[Quantity] pieces delivered [on time / before the event]. [Client feedback or outcome.]",
+  skills:["Client communication","Estimating","Proofing","Project coordination"]},
+ {tag:"Apparel",title:"[Group / event] apparel",client:"[Client / organization]",img:"apparel",
+  goal:"Create apparel the group would be proud to wear and that gave the team or event a clear identity.",
+  did:"Gathered the brief, guided garment and print choices, managed sizing and order details, approved artwork with the client, and kept production on schedule through delivery.",
+  result:"[Quantity] pieces delivered. [Reorders, positive feedback, or where it was worn.]",
+  skills:["Account management","Print production","Adobe Creative Suite","Organization"]},
+ {tag:"Stickers & merch",title:"[Brand / campaign] sticker pack",client:"[Client / organization]",img:"stickers",
+  goal:"Offer a low-cost, shareable giveaway that spread [client]’s brand with a personality.",
+  did:"Recommended formats and finishes, prepared artwork and proofs, priced options, and coordinated the production run and handoff.",
+  result:"[Quantity] stickers delivered. [How they were distributed and received.]",
+  skills:["Promotional products","Estimating","Canva","Attention to detail"]},
+ {tag:"Signage",title:"[Event / space] signage",client:"[Client / organization]",img:"signage",
+  goal:"Make [event or space] easy to navigate and look polished, with signage readable from a distance.",
+  did:"Confirmed sizes, materials, and install needs, managed artwork and proofing, and worked with the production team to deliver everything ready for setup.",
+  result:"[Number] signs delivered and installed [on time]. [Client feedback.]",
+  skills:["Proofing","Vendor/team coordination","Event support","Project coordination"]},
+ {tag:"Client campaign",title:"[Campaign name]",client:"[Client / organization]",img:"campaign",
+  goal:"Bring [client]’s message together across print, promotional items, and an event so everything felt like one campaign.",
+  did:"Acted as the client’s main contact across the whole campaign. Planned the mix of collateral and promo items, managed estimates and timelines, and kept every piece consistent.",
+  result:"[Total pieces and formats] delivered together. [Event turnout, repeat business, or client feedback.]",
+  skills:["Marketing strategy","Account management","Print production","Presentation design"]}
+];
+document.getElementById("projects").innerHTML=projects.map(p=>`
+<article class="proj">
+ <div class="shots">
+  <div class="ph" data-img="images/${p.img}-1.jpg">Final photo or mockup<br>images/${p.img}-1.jpg</div>
+  <div class="ph" data-img="images/${p.img}-2.jpg">Detail shot<br>${p.img}-2.jpg</div>
+  <div class="ph" data-img="images/${p.img}-3.jpg">Detail shot<br>${p.img}-3.jpg</div>
+ </div>
+ <div>
+  <span class="tag">${p.tag}</span>
+  <h3>${p.title}</h3><div class="client">${p.client}</div>
+  <dl>
+   <div><dt>The goal</dt><dd>${p.goal}</dd></div>
+   <div><dt>What I handled</dt><dd>${p.did}</dd></div>
+   <div><dt>The result</dt><dd>${p.result}</dd></div>
+   <div><dt>Skills used</dt><dd class="chips">${p.skills.map(s=>`<span>${s}</span>`).join("")}</dd></div>
+  </dl>
+ </div>
+</article>`).join("");
+
+const cases=[
+ {title:"Hapi Nani Social Media Campaign",img:"hapi-nani",
+  shots:["Insert static post mockup","Insert static post mockup","Insert Reel concept","Insert content calendar overview"],
+  desc:"A four-week social-media campaign for a woman-owned tea and spice brand rooted in Punjabi heritage, wellness, and mindfulness. Our campaign used lifestyle content, heritage storytelling, static posts, and Reels to build engagement and brand awareness.",
+  focus:"Social strategy, content planning, brand storytelling, and campaign development."},
+ {title:"Ballard Village Winery Brand Refresh",img:"ballard",
+  shots:["Insert final logo and label","Insert Syrah 3D bottle mockup","Insert Rosé 3D bottle mockup"],
+  desc:"A branding and packaging refresh for a boutique Santa Ynez Valley winery. My team created a refined visual identity, wine-label concepts, and bottle mockups that reflected the winery’s family roots and elevated California wine experience.",
+  focus:"Brand strategy, packaging, audience research, and visual presentation."},
+ {title:"Redken Accessible Packaging Rebrand",img:"redken",
+  shots:["Insert final bottle mockup","Insert advertising mockup","Insert problem/solution visual"],
+  desc:"An accessibility-focused redesign for Redken shampoo and conditioner packaging. Our concept made it easier for consumers to identify and use products through clearer visual and tactile packaging details.",
+  focus:"Inclusive design, consumer research, packaging strategy, and campaign mockups."}
+];
+document.getElementById("cases-list").innerHTML=cases.map(c=>`
+<article class="case">
+ <span class="label">Academic Team Project</span>
+ <h3>${c.title}</h3>
+ <p class="desc">${c.desc}</p>
+ <p class="mine">My contributions included: [add my specific role here]</p>
+ <div class="cshots">${c.shots.map((s,i)=>`<div class="ph" data-img="images/${c.img}-${i+1}.jpg">[${s}]<br><small>images/${c.img}-${i+1}.jpg</small></div>`).join("")}</div>
+ <p class="focus">Focus: ${c.focus}</p>
+</article>`).join("");
+
+/* Show a real photo when the file exists; otherwise keep the placeholder. */
+document.querySelectorAll(".ph[data-img]").forEach(b=>{
+ const i=new Image();
+ i.onload=()=>{b.textContent="";i.alt=b.dataset.alt||"";b.appendChild(i)};
+ i.src=b.dataset.img;
+});
+
+/* Highlight the current nav section. */
+const links=[...document.querySelectorAll("nav ul a")];
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+ if(e.isIntersecting)links.forEach(a=>a.classList.toggle("on",a.hash==="#"+e.target.id));
+}),{rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll("main section").forEach(s=>io.observe(s));
+</script>
+</body>
+</html>
