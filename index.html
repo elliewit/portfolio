@@ -81,8 +81,8 @@ nav ul a.on{border-bottom-color:var(--accent)}
 .case h3{font-size:40px;margin-bottom:8px}
 .case .desc{max-width:70ch;margin-bottom:10px}
 .mine{color:var(--soft);margin-bottom:22px}
-.cshots{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:22px}
-.cshots .ph{aspect-ratio:4/3}
+.cshots{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:22px}
+.cshots .ph{aspect-ratio:4/5}
 .focus{font:italic 500 19px var(--serif);color:var(--accent)}
 /* content creation */
 .social{background:#fff;border-block:1px solid var(--line)}
@@ -136,6 +136,18 @@ footer{padding:28px 0;text-align:center;color:var(--soft);font-size:14px;border-
 
 .social .feed .post span {
   display: none;
+}
+.hapi-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.hapi-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
 }
 </style>
 </head>
@@ -279,8 +291,8 @@ document.getElementById("projects").innerHTML=projects.map(p=>`
 
 const cases=[
  {title:"Hapi Nani Social Media Campaign",img:"hapi-nani",
-  shots:["Insert static post mockup","Insert static post mockup","Insert Reel concept","Insert content calendar overview"],
-  desc:"A four-week social-media campaign for a woman-owned tea and spice brand rooted in Punjabi heritage, wellness, and mindfulness. Our campaign used lifestyle content, heritage storytelling, static posts, and Reels to build engagement and brand awareness.",
+shots:["Social post","Social post","Social post","Social post","Social post"],
+desc:"A four-week social-media campaign for a woman-owned tea and spice brand rooted in Punjabi heritage, wellness, and mindfulness. Our campaign used lifestyle content, heritage storytelling, static posts, and Reels to build engagement and brand awareness.",
   focus:"Social strategy, content planning, brand storytelling, and campaign development."},
  {title:"Ballard Village Winery Brand Refresh",img:"ballard",
   shots:["Insert final logo and label","Insert Syrah 3D bottle mockup","Insert Rosé 3D bottle mockup"],
