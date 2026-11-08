@@ -238,6 +238,18 @@ Then add this in your CSS:
   transform:rotate(-12deg);
   color:#B7C8DC;
 }
+  .intro{position:relative;overflow:hidden}
+
+.sparkle{
+  position:absolute;
+  color:#9CC3E6;
+  font-size:34px;
+  pointer-events:none;
+}
+
+.sparkle.one{top:58px;left:20%}
+.sparkle.two{top:150px;right:20%;font-size:26px}
+.sparkle.three{bottom:52px;right:27%;font-size:22px}
   .cshots video{
   width:100%;
   height:100%;
@@ -247,7 +259,11 @@ Then add this in your CSS:
 </style>
 </head>
 <body>
-
+  
+<span class="sparkle one">✦</span>
+<span class="sparkle two">✧</span>
+<span class="sparkle three">✦</span>
+  
 <div class="intro" id="home">
  <h1>Elle Witkowski</h1>
  <div class="divider"><i></i></div>
