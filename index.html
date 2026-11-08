@@ -256,13 +256,41 @@ Then add this in your CSS:
   object-fit:cover;
   display:block;
 }
+  .intro{position:relative;overflow:hidden}
+
+.sparkle,.hero-doodle{
+  position:absolute;
+  pointer-events:none;
+  color:#9CC3E6;
+  line-height:1;
+}
+
+.sparkle{font-family:Georgia,serif}
+.s1{top:45px;left:18%;font-size:34px}
+.s2{top:100px;left:27%;font-size:20px}
+.s3{top:62px;right:19%;font-size:30px}
+.s4{top:145px;right:27%;font-size:18px}
+.s5{bottom:58px;left:23%;font-size:23px}
+.s6{bottom:48px;right:21%;font-size:29px}
+
+.hero-doodle{color:#B7C8DC}
+.d1{top:170px;left:12%;font-size:42px}
+.d2{bottom:50px;right:13%;font-size:35px}
+.d3{bottom:68px;left:14%;font-size:65px;transform:rotate(-10deg)}
+  
 </style>
 </head>
 <body>
   
-<span class="sparkle one">✦</span>
-<span class="sparkle two">✧</span>
-<span class="sparkle three">✦</span>
+<span class="sparkle s1">✦</span>
+<span class="sparkle s2">✧</span>
+<span class="sparkle s3">✦</span>
+<span class="sparkle s4">✧</span>
+<span class="sparkle s5">✦</span>
+<span class="sparkle s6">✧</span>
+<span class="hero-doodle d1">♡</span>
+<span class="hero-doodle d2">✿</span>
+<span class="hero-doodle d3">〰</span>
   
 <div class="intro" id="home">
  <h1>Elle Witkowski</h1>
