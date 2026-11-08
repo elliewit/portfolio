@@ -432,7 +432,7 @@ shots:["Social post","Social post","Social post","Social post"],
   desc:"A four-week social-media campaign for a woman-owned tea and spice brand rooted in Punjabi heritage, wellness, and mindfulness. Our campaign used lifestyle content, heritage storytelling, static posts, and Reels to build engagement and brand awareness.",
   focus:"Social strategy, content planning, brand storytelling, and campaign development."},
 {title:"Ballard Village Winery Brand Refresh",img:"ballard",
- shots:["Front label","Video ad","Back label"],
+shots:["Front label","Video ad","Back label","Brand development process"],
   desc:"A branding and packaging refresh for a boutique Santa Ynez Valley winery. My team created a refined visual identity, wine-label concepts, and bottle mockups that reflected the winery’s family roots and elevated California wine experience.",
   focus:"Brand strategy, packaging, audience research, and visual presentation."},
  {title:"Redken Accessible Packaging Rebrand",img:"redken",
@@ -448,8 +448,8 @@ document.getElementById("cases-list").innerHTML=cases.map(c=>`
  <p class="mine">My contributions included: Market and competitor research, target-audience development, brand background research and social content creation. I helped shape campaign messaging and visual concepts that aligned with Hapi Nani’s heritage, wellness positioning and customer interests.</p>
 <div class="cshots">${c.shots.map((s,i)=>
   c.img==="ballard" && i===1
-  ? `<div class="ph"><video controls playsinline><source src="images/ballard-2.mov" type="video/quicktime"></video></div>`
-  : `<div class="ph" data-img="images/${c.img}-${i+1}.jpg">[${s}]<br><small>images/${c.img}-${i+1}.jpg</small></div>`
+? `<div class="ph"><video controls playsinline><source src="images/ballard-2.mov" type="video/quicktime"></video></div>`
+: `<div class="ph ${c.img==="ballard" && i===3 ? "wide-shot" : ""}" data-img="images/${c.img}-${i+1}.jpg">[${s}]<br><small>images/${c.img}-${i+1}.jpg</small></div>`
 ).join("")}</div> <p class="focus">Focus: ${c.focus}</p>
 </article>`).join("");
 
