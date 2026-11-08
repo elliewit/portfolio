@@ -171,6 +171,73 @@ footer{padding:28px 0;text-align:center;color:var(--soft);font-size:14px;border-
   border-color:var(--accent);
   box-shadow:0 8px 18px rgba(20,40,75,.16);
 }
+  Your top looks polished already—add a few subtle navy/blue doodles so it feels more creative without looking childish.
+
+Inside:
+
+```html
+<div class="intro" id="home">
+```
+
+Paste this immediately underneath:
+
+```html
+<div class="hero-art" aria-hidden="true">
+  <span class="sparkle sparkle-one">✦</span>
+  <span class="sparkle sparkle-two">✧</span>
+  <span class="sparkle sparkle-three">✦</span>
+  <span class="loop">〰</span>
+</div>
+```
+
+Then add this in your CSS:
+
+```css
+.intro{
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-art{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  color:var(--sky);
+  opacity:.8;
+}
+
+.sparkle{
+  position:absolute;
+  font-family:Georgia, serif;
+  line-height:1;
+}
+
+.sparkle-one{
+  top:50px;
+  left:18%;
+  font-size:34px;
+}
+
+.sparkle-two{
+  top:125px;
+  right:19%;
+  font-size:26px;
+}
+
+.sparkle-three{
+  bottom:48px;
+  right:26%;
+  font-size:22px;
+}
+
+.loop{
+  position:absolute;
+  bottom:65px;
+  left:22%;
+  font-size:70px;
+  transform:rotate(-12deg);
+  color:#B7C8DC;
+}
 </style>
 </head>
 <body>
@@ -212,10 +279,11 @@ footer{padding:28px 0;text-align:center;color:var(--soft);font-size:14px;border-
   <div>
    <h3>Account Manager</h3><div class="org">University Graphic Systems, Cal Poly</div>
    <ul>
-    <li>Work directly with clients on event materials, promotional products, signage, stickers, apparel, and print collateral.</li>
-    <li>Guide each project from initial conversation and estimate through artwork, proofing, production, and delivery.</li>
-    <li>Coordinate with production teams and vendors to keep projects organized and on schedule.</li>
-    <li>Help coordinate events and support marketing and creative projects. [Add a number: projects per quarter, clients managed, etc.]</li>
+      <li>Build and maintain relationships with current and prospective clients by identifying project needs, preparing estimates, and providing responsive support.</li>
+      <li>Manage projects from initial client consultation through artwork, proofing, production, and final delivery.</li>
+      <li>Coordinate with customer service, design, production teams, and vendors to deliver accurate, high-quality projects on schedule.</li>
+      <li>Review customer artwork for print readiness, communicate requirements, and recommend solutions across promotional products, apparel, signage, event materials, and print collateral.</li>
+      <li>Support the development of new print products and services that contribute to UGS growth.</li>
    </ul>
   </div>
  </div>
