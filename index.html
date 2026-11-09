@@ -294,12 +294,35 @@ Then add this in your CSS:
   object-fit:contain;
   background:#fff;
 }
-  .sanuk-logo{
-  width:90px;
+.work-heading{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:20px;
+}
+
+.sanuk-logo{
+  width:85px;
   height:auto;
+  border-radius:10px;
+  margin-top:4px;
+}
+  /* Sanuk vertical Story series */
+.cshots.story-series{
+  grid-template-columns:repeat(4, minmax(0, 1fr));
+  align-items:start;
+}
+
+.cshots.story-series .ph{
+  aspect-ratio:9 / 16;
+  background:#b9def3;
+}
+
+.cshots.story-series .ph img{
+  width:100%;
+  height:100%;
+  object-fit:contain; /* shows the entire Story—no cropping */
   display:block;
-  margin:0 0 18px auto;
-  border-radius:12px;
 }
   
 </style>
@@ -367,12 +390,18 @@ Then add this in your CSS:
  <a class="btn" href="images/Elle_Witkowski_resume.pdf">Download full resume (PDF)</a>
 </div></section>
 
-<section id="work"><div class="wrap">
- <h2>Selected Work</h2>
-  <img class="sanuk-logo" src="images/sanuk-logo.png" alt="Sanuk logo">
+<section id="work">
+  <div class="wrap">
 
- <div id="projects"></div>
-</div></section>
+    <div class="work-heading">
+      <h2>Selected Work</h2>
+      <img class="sanuk-logo" src="images/sanuk-logo.png" alt="Sanuk logo">
+    </div>
+
+    <div id="projects"></div>
+
+  </div>
+</section>
 
 <section id="cases" style="padding-top:0"><div class="wrap">
  <h2>Class Projects</h2>
@@ -426,6 +455,8 @@ const projects=[
   title:"Sanuk Social Content & Brand Marketing",
   client:"Sanuk",
   img:"sanuk",
+  shots:4,
+  layout:"stories",
   goal:"Create lifestyle-focused content that supported Sanuk’s seasonal product marketing and connected with its target audience.",
   did:"Researched social trends, competitor activity, and target-audience interests; developed content concepts; created visual assets; and supported seasonal brand storytelling.",
   result:"Produced social content concepts and visual assets that demonstrated seasonal product positioning through lifestyle marketing.",
