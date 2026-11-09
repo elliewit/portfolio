@@ -411,47 +411,45 @@ Then add this in your CSS:
 
 <script>
 /* ---- EDIT PROJECTS HERE. Photos go in /images; use the file names shown in each placeholder. ---- */
+
 const projects=[
- <span class="label">Marketing Internship</span>
+ {tag:"Marketing Internship",
+  title:"Sanuk Social Content & Brand Marketing",
+  client:"Sanuk",
+  img:"sanuk",
+  goal:"Create lifestyle-focused content that supported Sanuk’s seasonal product marketing and connected with its target audience.",
+  did:"Researched social trends, competitor activity, and target-audience interests; developed content concepts; created visual assets; and supported seasonal brand storytelling.",
+  result:"Produced social content concepts and visual assets that demonstrated seasonal product positioning through lifestyle marketing.",
+  skills:["Content creation","Trend research","Social media strategy","Brand storytelling"]},
 
-<h3>Sanuk Social Content & Brand Marketing</h3>
+ {tag:"Academic Team Project",
+  title:"Hapi Nani Social Media Campaign",
+  client:"Hapi Nani",
+  img:"hapi-nani",
+  goal:"Build awareness for a woman-owned tea and spice brand through social content rooted in Punjabi heritage, wellness, and mindfulness.",
+  did:"Conducted market and competitor research, defined a target audience, and created social content and visual concepts that supported Hapi Nani’s heritage, wellness, and mindfulness positioning.",
+  result:"Created a four-week social campaign featuring lifestyle content, heritage storytelling, and engaging social post concepts.",
+  skills:["Social media strategy","Competitor research","Content creation","Brand storytelling"]},
 
-<p class="desc">
-  Supported Sanuk’s brand marketing through social content creation, trend research, and campaign concepts designed to connect with its lifestyle-focused audience.
-</p>
+ {tag:"Academic Team Project",
+  title:"Ballard Village Winery Brand Refresh",
+  client:"Ballard Village Winery",
+  img:"ballard",
+  goal:"Refresh a boutique winery’s visual identity and create wine packaging that reflected its Santa Ynez Valley roots.",
+  did:"Developed label concepts, created bottle mockups and campaign visuals, and helped translate the winery’s family roots into a refined visual identity.",
+  result:"Produced a cohesive brand direction including front and back wine labels, bottle mockups, a video advertisement, and brand-development visuals.",
+  skills:["Brand strategy","Packaging design","Audience research","Visual presentation"]},
 
-<p class="mine">
-  My contributions included researching social-media trends and competitors, developing content concepts, creating visual assets, and supporting brand storytelling for seasonal product and campaign initiatives.
-</p>
-
-<div class="cshots">
-  <!-- Your Sanuk images go here -->
-</div>
-
-<p class="focus">
-  Focus: Social media strategy, content creation, trend research, brand storytelling, and consumer engagement.
-</p>
- {tag:"Apparel",title:"[Group / event] apparel",client:"[Client / organization]",img:"apparel",
-  goal:"Create apparel the group would be proud to wear and that gave the team or event a clear identity.",
-  did:"Gathered the brief, guided garment and print choices, managed sizing and order details, approved artwork with the client, and kept production on schedule through delivery.",
-  result:"[Quantity] pieces delivered. [Reorders, positive feedback, or where it was worn.]",
-  skills:["Account management","Print production","Adobe Creative Suite","Organization"]},
- {tag:"Stickers & merch",title:"[Brand / campaign] sticker pack",client:"[Client / organization]",img:"stickers",
-  goal:"Offer a low-cost, shareable giveaway that spread [client]’s brand with a personality.",
-  did:"Recommended formats and finishes, prepared artwork and proofs, priced options, and coordinated the production run and handoff.",
-  result:"[Quantity] stickers delivered. [How they were distributed and received.]",
-  skills:["Promotional products","Estimating","Canva","Attention to detail"]},
- {tag:"Signage",title:"[Event / space] signage",client:"[Client / organization]",img:"signage",
-  goal:"Make [event or space] easy to navigate and look polished, with signage readable from a distance.",
-  did:"Confirmed sizes, materials, and install needs, managed artwork and proofing, and worked with the production team to deliver everything ready for setup.",
-  result:"[Number] signs delivered and installed [on time]. [Client feedback.]",
-  skills:["Proofing","Vendor/team coordination","Event support","Project coordination"]},
- {tag:"Client campaign",title:"[Campaign name]",client:"[Client / organization]",img:"campaign",
-  goal:"Bring [client]’s message together across print, promotional items, and an event so everything felt like one campaign.",
-  did:"Acted as the client’s main contact across the whole campaign. Planned the mix of collateral and promo items, managed estimates and timelines, and kept every piece consistent.",
-  result:"[Total pieces and formats] delivered together. [Event turnout, repeat business, or client feedback.]",
-  skills:["Marketing strategy","Account management","Print production","Presentation design"]}
+ {tag:"Academic Team Project",
+  title:"Redken Accessible Packaging Rebrand",
+  client:"Redken",
+  img:"redken",
+  goal:"Make shampoo and conditioner easier for consumers to identify and use through clearer visual and tactile packaging details.",
+  did:"Developed accessible packaging concepts, created tactile bottle mockups, and designed campaign advertisements highlighting the shampoo and conditioner distinction.",
+  result:"Created an accessibility-focused rebrand with packaging mockups and promotional advertisements that communicated the product benefits.",
+  skills:["Inclusive design","Consumer research","Packaging strategy","Campaign mockups"]}
 ];
+  
 document.getElementById("projects").innerHTML=projects.map(p=>`
 <article class="proj">
  <div class="shots">
