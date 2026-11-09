@@ -356,6 +356,13 @@ Then add this in your CSS:
   object-fit:cover;       /* fills each Story frame */
   display:block;
 }
+  .story-caption{
+  margin:16px 0 0;
+  color:var(--soft);
+  font-style:italic;
+  text-align:center;
+  font-size:16px;
+}
   
 </style>
 </head>
@@ -489,6 +496,7 @@ const projects=[
   img:"sanuk",
   shots:4,
   layout:"stories",
+  caption:"A four-frame Instagram Story series created for Sanuk’s Fourth of July sale, featuring seasonal sandal styles, product highlights, and promotional messaging. The series supported a modest increase in Story engagement during the sale period.",  
   goal:"Create lifestyle-focused content that supported Sanuk’s seasonal product marketing and connected with its target audience.",
   did:"Researched social trends, competitor activity, and target-audience interests; developed content concepts; created visual assets; and supported seasonal brand storytelling.",
   result:"Produced social content concepts and visual assets that demonstrated seasonal product positioning through lifestyle marketing.",
@@ -516,7 +524,7 @@ document.getElementById("projects").innerHTML=projects.map(p=>`
    `<div class="ph" data-img="images/${p.img}-${i+1}.jpg"></div>`
   ).join("")}
  </div>
-
+ ${p.caption ? `<p class="story-caption">${p.caption}</p>` : ""}
 </article>`).join("");
 
 const cases=[
