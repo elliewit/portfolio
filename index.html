@@ -324,6 +324,35 @@ Then add this in your CSS:
   object-fit:contain; /* shows the entire Story—no cropping */
   display:block;
 }
+
+  /* Sanuk: four vertical Story posts in one row */
+.proj.proj-stories{
+  display:block;
+}
+
+.proj.proj-stories .project-copy{
+  margin-bottom:26px;
+}
+
+.proj.proj-stories .shots{
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0, 1fr));
+  gap:12px;
+}
+
+.proj.proj-stories .shots .ph,
+.proj.proj-stories .shots .ph:first-child{
+  grid-column:auto;
+  aspect-ratio:9 / 16;
+  min-height:0;
+}
+
+.proj.proj-stories .shots .ph img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
   
 </style>
 </head>
@@ -464,15 +493,13 @@ const projects=[
 ];
   
 document.getElementById("projects").innerHTML=projects.map(p=>`
-<article class="proj">
- <div class="shots">
-  <div class="ph" data-img="images/${p.img}-1.jpg">Final photo or mockup<br>images/${p.img}-1.jpg</div>
-  <div class="ph" data-img="images/${p.img}-2.jpg">Detail shot<br>${p.img}-2.jpg</div>
-  <div class="ph" data-img="images/${p.img}-3.jpg">Detail shot<br>${p.img}-3.jpg</div>
- </div>
- <div>
+<article class="proj ${p.layout === "stories" ? "proj-stories" : ""}">
+
+ <div class="project-copy">
   <span class="tag">${p.tag}</span>
-  <h3>${p.title}</h3><div class="client">${p.client}</div>
+  <h3>${p.title}</h3>
+  <div class="client">${p.client}</div>
+
   <dl>
    <div><dt>The goal</dt><dd>${p.goal}</dd></div>
    <div><dt>What I handled</dt><dd>${p.did}</dd></div>
@@ -480,6 +507,13 @@ document.getElementById("projects").innerHTML=projects.map(p=>`
    <div><dt>Skills used</dt><dd class="chips">${p.skills.map(s=>`<span>${s}</span>`).join("")}</dd></div>
   </dl>
  </div>
+
+ <div class="shots">
+  ${Array.from({length:p.shots || 3},(_,i)=>
+   `<div class="ph" data-img="images/${p.img}-${i+1}.jpg"></div>`
+  ).join("")}
+ </div>
+
 </article>`).join("");
 
 const cases=[
