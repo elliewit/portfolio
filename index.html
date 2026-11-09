@@ -325,7 +325,7 @@ Then add this in your CSS:
   display:block;
 }
 
-  /* Sanuk: four vertical Story posts in one row */
+/* Sanuk: four vertical Story posts in one row */
 .proj.proj-stories{
   display:block;
 }
@@ -345,12 +345,15 @@ Then add this in your CSS:
   grid-column:auto;
   aspect-ratio:9 / 16;
   min-height:0;
+  padding:0;              /* removes blue space around each image */
+  background:transparent;
+  overflow:hidden;
 }
 
 .proj.proj-stories .shots .ph img{
   width:100%;
   height:100%;
-  object-fit:contain;
+  object-fit:cover;       /* fills each Story frame */
   display:block;
 }
   
