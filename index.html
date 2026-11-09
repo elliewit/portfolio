@@ -363,6 +363,54 @@ Then add this in your CSS:
   text-align:center;
   font-size:16px;
 }
+  .sanuk-extra{margin-top:34px}
+.sanuk-subtitle{
+  margin:26px 0 12px;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--accent);
+}
+
+.story-pair,.lifestyle-pair,.story-trio{
+  display:grid;
+  gap:12px;
+  margin:auto;
+}
+
+.story-pair{
+  grid-template-columns:repeat(2,1fr);
+  max-width:470px;
+}
+
+.lifestyle-pair{
+  grid-template-columns:repeat(2,1fr);
+  max-width:650px;
+}
+
+.story-trio{
+  grid-template-columns:repeat(3,1fr);
+  max-width:700px;
+}
+
+.story-pair .ph,.story-trio .ph{aspect-ratio:9/16}
+.lifestyle-pair .ph{aspect-ratio:1/1}
+
+.sanuk-extra .ph,
+.sanuk-extra .ph:first-child{
+  grid-column:auto;
+  padding:0;
+  overflow:hidden;
+  background:transparent;
+}
+
+.sanuk-extra .ph img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
   
 </style>
 </head>
@@ -497,6 +545,9 @@ const projects=[
   shots:4,
   layout:"stories",
   caption:"A four-frame Instagram Story series created for Sanuk’s Fourth of July sale, featuring seasonal sandal styles, product highlights, and promotional messaging. The series supported a modest increase in Story engagement during the sale period.",  
+  featureStories:["sanuk-feature-1.jpg","sanuk-feature-2.jpg"],
+lifestylePosts:["sanuk-lifestyle-1.jpg","sanuk-lifestyle-2.jpg"],
+summerStories:["sanuk-summer-1.jpg","sanuk-summer-2.jpg","sanuk-summer-3.jpg"],
   goal:"Create lifestyle-focused content that supported Sanuk’s seasonal product marketing and connected with its target audience.",
   did:"Researched social trends, competitor activity, and target-audience interests; developed content concepts; created visual assets; and supported seasonal brand storytelling.",
   result:"Produced social content concepts and visual assets that demonstrated seasonal product positioning through lifestyle marketing.",
@@ -519,12 +570,41 @@ document.getElementById("projects").innerHTML=projects.map(p=>`
   </dl>
  </div>
 
- <div class="shots">
+<div class="shots">
   ${Array.from({length:p.shots || 3},(_,i)=>
-   `<div class="ph" data-img="images/${p.img}-${i+1}.jpg"></div>`
+    `<div class="ph" data-img="images/${p.img}-${i+1}.jpg"></div>`
   ).join("")}
- </div>
- ${p.caption ? `<p class="story-caption">${p.caption}</p>` : ""}
+</div>
+
+${p.caption ? `<p class="story-caption">${p.caption}</p>` : ""}
+
+${p.featureStories ? `
+  <div class="sanuk-extra">
+
+    <p class="sanuk-subtitle">Product Feature Stories</p>
+    <div class="story-pair">
+      ${p.featureStories.map(file=>
+        `<div class="ph" data-img="images/${file}"></div>`
+      ).join("")}
+    </div>
+
+    <p class="sanuk-subtitle">Lifestyle Content</p>
+    <div class="lifestyle-pair">
+      ${p.lifestylePosts.map(file=>
+        `<div class="ph" data-img="images/${file}"></div>`
+      ).join("")}
+    </div>
+
+    <p class="sanuk-subtitle">Summer Story Series</p>
+    <div class="story-trio">
+      ${p.summerStories.map(file=>
+        `<div class="ph" data-img="images/${file}"></div>`
+      ).join("")}
+    </div>
+
+  </div>
+` : ""}
+
 </article>`).join("");
 
 const cases=[
