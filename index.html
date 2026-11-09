@@ -411,7 +411,30 @@ Then add this in your CSS:
   object-fit:cover;
   display:block;
 }
-  
+
+  .sanuk-blog{
+  margin-top:42px;
+  padding-top:30px;
+  border-top:1px solid var(--line);
+}
+
+.blog-copy{
+  max-width:68ch;
+  margin:0 0 20px;
+  color:var(--soft);
+}
+
+.blog-assets{
+  display:grid;
+  gap:14px;
+}
+
+.blog-assets img{
+  width:100%;
+  height:auto;
+  display:block;
+  border:1px solid var(--line);
+}
 </style>
 </head>
 <body>
@@ -548,6 +571,14 @@ const projects=[
 featureStories:["sanuk-feature-1.jpg","sanuk-feature-2.jpg","sanuk-feature-3.jpg"],
   lifestylePosts:["sanuk-lifestyle-1.jpg","sanuk-lifestyle-2.jpg"],
 summerStories:["sanuk-summer-1.jpg","sanuk-summer-2.jpg","sanuk-summer-3.jpg"],
+  blogAssets:[
+ "sanuk-blog-1.jpg",
+ "sanuk-blog-2.jpg",
+ "sanuk-blog-3.jpg",
+ "sanuk-blog-4.jpg",
+ "sanuk-blog-5.jpg",
+ "sanuk-blog-6.jpg"
+],
   goal:"Create lifestyle-focused content that supported Sanuk’s seasonal product marketing and connected with its target audience.",
   did:"Researched social trends, competitor activity, and target-audience interests; developed content concepts; created visual assets; and supported seasonal brand storytelling.",
   result:"Produced social content concepts and visual assets that demonstrated seasonal product positioning through lifestyle marketing.",
@@ -602,6 +633,21 @@ ${p.featureStories ? `
       ).join("")}
     </div>
 
+  </div>
+` : ""}
+
+${p.blogAssets ? `
+  <div class="sanuk-blog">
+    <p class="sanuk-subtitle">Cosmic Collection Blog Concept</p>
+    <p class="blog-copy">
+      A visual blog concept designed to introduce Sanuk’s Cosmic Collection through lifestyle imagery, product storytelling, and a beach-inspired editorial layout.
+    </p>
+
+    <div class="blog-assets">
+      ${p.blogAssets.map(file=>
+        `<img src="images/${file}" alt="Sanuk Cosmic Collection blog concept" loading="lazy">`
+      ).join("")}
+    </div>
   </div>
 ` : ""}
 
