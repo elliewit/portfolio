@@ -515,6 +515,65 @@ Then add this in your CSS:
   from{transform:scaleX(0)}
   to{transform:scaleX(1)}
 }
+  /* Double-sided wrapping-paper reveal */
+.paper-unroll{
+  display:grid;
+  grid-template-columns:1fr 22px 1fr;
+  align-items:center;
+  gap:0;
+  margin-top:24px;
+  overflow:hidden;
+}
+
+.paper-side{
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:#fff;
+  opacity:0;
+  transition:transform 1s ease, opacity .5s ease;
+}
+
+.paper-front{
+  transform:scaleX(.08);
+  transform-origin:right center;
+}
+
+.paper-back{
+  transform:scaleX(.08);
+  transform-origin:left center;
+}
+
+.paper-unroll.unwrapped .paper-side{
+  transform:scaleX(1);
+  opacity:1;
+}
+
+.paper-side img{
+  display:block;
+  width:100%;
+  height:270px;
+  object-fit:cover;
+}
+
+.paper-side span{
+  position:absolute;
+  bottom:12px;
+  left:12px;
+  padding:5px 10px;
+  background:rgba(255,255,255,.9);
+  color:var(--ink);
+  font:italic 500 15px var(--serif);
+}
+
+.paper-core{
+  position:relative;
+  z-index:2;
+  height:285px;
+  background:linear-gradient(90deg,#9cbddd,#e4f0f8,#9cbddd);
+  border-radius:50%;
+  box-shadow:0 0 10px rgba(20,40,75,.25);
+}
 </style>
 </head>
 <body>
@@ -611,9 +670,19 @@ Then add this in your CSS:
     </p>
   </div>
 
-  <div class="paper-roll">
-    <img src="images/wrapping-paper.jpg" alt="Winter botanical wrapping paper design">
+<div class="paper-unroll">
+  <div class="paper-side paper-front">
+    <img src="images/wrapping-front.jpg" alt="Front of winter botanical wrapping paper">
+    <span>Front · Botanical Pattern</span>
   </div>
+
+  <div class="paper-core" aria-hidden="true"></div>
+
+  <div class="paper-side paper-back">
+    <img src="images/wrapping-back.jpg" alt="Reverse side of winter wrapping paper">
+    <span>Reverse · Coordinating Stripe</span>
+  </div>
+</div>
 </article>
 
   </div>
@@ -809,6 +878,15 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{
  if(e.isIntersecting)links.forEach(a=>a.classList.toggle("on",a.hash==="#"+e.target.id));
 }),{rootMargin:"-45% 0px -50% 0px"});
 document.querySelectorAll("main section").forEach(s=>io.observe(s));
+  const paperUnroll=document.querySelector(".paper-unroll");
+
+if(paperUnroll){
+  new IntersectionObserver(entries=>{
+    if(entries[0].isIntersecting){
+      paperUnroll.classList.add("unwrapped");
+    }
+  },{threshold:.35}).observe(paperUnroll);
+}
 </script>
 </body>
 </html>
