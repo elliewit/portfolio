@@ -816,6 +816,27 @@ Then add this in your CSS:
   animation:none;
   transform:none;
 }
+  /* Remove extra blank space below wrapping paper */
+.gift-wrap,
+.gift-reveal{
+  height:auto !important;
+  min-height:0 !important;
+}
+
+.gift-wrap{
+  padding-bottom:36px !important;
+}
+
+.gift-reveal.open .unwrapped-paper{
+  height:auto !important;
+  min-height:0 !important;
+  margin-bottom:0 !important;
+}
+  .contact-signoff{
+  margin:18px auto 26px;
+  font:italic 500 24px var(--serif);
+  color:var(--accent);
+}
 </style>
 </head>
 <body>
@@ -845,8 +866,7 @@ Then add this in your CSS:
   <h2>Biography</h2>
   <p>Hi, I'm Elle! I'm a Graphic Communication student at Cal Poly, concentrating in Integrated Marketing and graduating in May 2027! I love bringing creative ideas to life through branding, content, events and client-facing projects.</p>
   <p>As an Account Manager at University Graphic Systems, I manage projects from initial client conversations through final production. I collaborate with clients and creative teams to bring ideas to life across branding, print, promotional products, apparel, signage and event materials.</p>
-  <p>I’m especially interested in lifestyle, beauty, entertainment and brand-experience marketing.</p>
- </div>
+  <p>Originally from Rancho Palos Verdes, California, I’m open to relocating for a full-time opportunity where I can bring my passion for lifestyle, beauty, entertainment, brand-experience marketing, client partnerships and sales to a creative team.</p> </div>
 </div></section>
 
 <section class="skills" id="skills"><div class="wrap">
@@ -978,11 +998,11 @@ Then add this in your CSS:
 
 <section class="contact" id="contact"><div class="wrap">
  <h2>Let’s connect!</h2>
- <p class="lede">I’m always excited to connect with people in marketing, PR, lifestyle, entertainment, events and creative industries.</p>
- <div class="links">
+<p class="lede">I’m always excited to connect with people in marketing, sales, client partnerships, lifestyle, entertainment, events and creative industries! I’m super open to relocating for the right full-time opportunity after graduation:)</p> <div class="links">
   <a href="mailto:elliewit3@gmail.com"><small>Email</small>elliewit3@gmail.com</a>
   <a href="https://www.linkedin.com/in/ellie-witkowski" target="_blank" rel="noopener"><small>LinkedIn</small>linkedin.com/in/ellie-witkowski</a>
   <div><small>Location</small>Los Angeles area</div>
+  <p class="contact-signoff">Looking forward to connecting!</p>
  </div>
 </div></section>
 </main>
