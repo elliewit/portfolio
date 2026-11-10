@@ -776,6 +776,46 @@ Then add this in your CSS:
   opacity:1;
   transform:translateY(0);
 }
+  /* Thin kraft-paper roll underneath both wrapping-paper sides */
+.paper-unroll{
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.paper-front{
+  grid-column:1;
+}
+
+.paper-back{
+  grid-column:2;
+}
+
+.paper-core{
+  grid-column:1 / -1;
+  grid-row:2;
+  width:100%;
+  height:28px;
+  margin-top:4px;
+  border-radius:999px;
+  background:linear-gradient(
+    180deg,
+    #5a3826 0%,
+    #9b6946 18%,
+    #d6aa78 48%,
+    #8a593a 80%,
+    #4d2e20 100%
+  );
+  box-shadow:
+    inset 0 2px 3px rgba(255,255,255,.28),
+    inset 0 -3px 4px rgba(54,29,17,.4),
+    0 5px 8px rgba(20,40,75,.16);
+}
+
+/* Remove the big spinning oval animation */
+.paper-unroll.unwrapped .paper-core{
+  animation:none;
+  transform:none;
+}
 </style>
 </head>
 <body>
