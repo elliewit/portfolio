@@ -435,6 +435,22 @@ Then add this in your CSS:
   display:block;
   border:1px solid var(--line);
 }
+
+  /* Açaí project: three images on top, wider postcard sides underneath */
+.cshots:has(.ph[data-img*="acai"]){
+  grid-template-columns:repeat(6, minmax(0, 1fr));
+}
+
+.cshots:has(.ph[data-img*="acai"]) .ph{
+  grid-column:span 2;
+  aspect-ratio:4 / 5;
+}
+
+.cshots:has(.ph[data-img*="acai"]) .ph:nth-child(4),
+.cshots:has(.ph[data-img*="acai"]) .ph:nth-child(5){
+  grid-column:span 3;
+  aspect-ratio:16 / 10;
+}
 </style>
 </head>
 <body>
@@ -672,8 +688,8 @@ const cases=[
   focus:"Inclusive design, consumer research, packaging strategy, and campaign mockups."},
 
  {title:"The Açaí Project: Personalized Customer Journey",img:"acai",
-  shots:["Social media post","Segmented emails","Initial postcard","Segmented postcard"],
-  desc:"A group campaign concept that used a promotional discount and customer survey to support data collection, audience segmentation, and personalized follow-up marketing.",
+shots:["Social media post","Segmented emails","Website landing page","Postcard front","Postcard back"],
+desc:"A group campaign concept that used a promotional discount and customer survey to support data collection, audience segmentation, and personalized follow-up marketing.",
   mine:"Collaborated on campaign strategy, audience segmentation, promotional concepts, and personalized communication ideas across social media, email, web, and direct mail.",
   focus:"Campaign strategy, audience segmentation, email marketing, dynamic content, and direct mail."}
 ];
