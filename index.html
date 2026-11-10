@@ -574,6 +574,88 @@ Then add this in your CSS:
   border-radius:50%;
   box-shadow:0 0 10px rgba(20,40,75,.25);
 }
+  /* Slower, more realistic gift-wrap opening */
+.paper-side{
+  transition:none;
+  will-change:transform, opacity;
+}
+
+.paper-unroll.unwrapped .paper-front{
+  animation:unwrap-front 4.6s cubic-bezier(.16,.8,.18,1) forwards;
+}
+
+.paper-unroll.unwrapped .paper-back{
+  animation:unwrap-back 4.6s .35s cubic-bezier(.16,.8,.18,1) forwards;
+}
+
+.paper-unroll.unwrapped .paper-core{
+  animation:spool-roll 4.9s ease-in-out forwards;
+}
+
+@keyframes unwrap-front{
+  0%{
+    opacity:0;
+    transform:translateX(40px) scaleX(.04);
+  }
+  18%{
+    opacity:1;
+  }
+  60%{
+    transform:translateX(8px) scaleX(.68);
+  }
+  82%{
+    transform:translateX(-4px) scaleX(.94);
+  }
+  100%{
+    opacity:1;
+    transform:translateX(0) scaleX(1);
+  }
+}
+
+@keyframes unwrap-back{
+  0%{
+    opacity:0;
+    transform:translateX(-40px) scaleX(.04);
+  }
+  18%{
+    opacity:1;
+  }
+  60%{
+    transform:translateX(-8px) scaleX(.68);
+  }
+  82%{
+    transform:translateX(4px) scaleX(.94);
+  }
+  100%{
+    opacity:1;
+    transform:translateX(0) scaleX(1);
+  }
+}
+
+@keyframes spool-roll{
+  0%{
+    transform:scaleX(.55) rotate(0deg);
+  }
+  35%{
+    transform:scaleX(.9) rotate(6deg);
+  }
+  65%{
+    transform:scaleX(1.08) rotate(-4deg);
+  }
+  100%{
+    transform:scaleX(1) rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .paper-unroll.unwrapped .paper-front,
+  .paper-unroll.unwrapped .paper-back,
+  .paper-unroll.unwrapped .paper-core{
+    animation:none;
+    opacity:1;
+    transform:none;
+  }
+}
 </style>
 </head>
 <body>
