@@ -837,6 +837,39 @@ Then add this in your CSS:
   font:italic 500 24px var(--serif);
   color:var(--accent);
 }
+  .credentials{
+  background:#fff;
+  border-block:1px solid var(--line);
+}
+
+.credential-list{
+  margin-top:28px;
+  border-top:1px solid var(--line);
+}
+
+.credential{
+  display:grid;
+  grid-template-columns:28px 1fr auto;
+  align-items:center;
+  gap:12px;
+  padding:24px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.credential span{
+  color:var(--accent);
+}
+
+.credential h3{
+  font-size:27px;
+}
+
+.credential small{
+  color:var(--soft);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:12px;
+}
 </style>
 </head>
 <body>
@@ -995,7 +1028,24 @@ Then add this in your CSS:
 </a>
  </div>
 </div></section>
+<section class="credentials" id="credentials">
+  <div class="wrap">
+    <h2>Certifications</h2>
 
+    <div class="credential">
+      <span>✦</span>
+      <h3>Marketing with Canva</h3>
+      <small>Canva Design School · Certificate of Completion</small>
+    </div>
+    
+    <div class="credential">
+      <span>✦</span>
+      <h3>Klaviyo Digital Marketing</h3>
+      <small>Klaviyo Academy · Certified</small>
+    </div>
+
+  </div>
+</section>
 <section class="contact" id="contact"><div class="wrap">
  <h2>Let’s Connect!</h2>
 <p class="lede">I’m always excited to connect with people in marketing, sales, client partnerships, lifestyle, entertainment, events and creative industries! I’m super open to relocating for the right full-time opportunity after graduation:)</p> <div class="links">
